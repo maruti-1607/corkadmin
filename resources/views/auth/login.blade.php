@@ -8,7 +8,9 @@
                     <div class="form-content">
 
                         <h1 class="">Log In to <a href="index.html"><span class="brand-name">CORK</span></a></h1>
-                        <p class="signup-link">New Here? <a href="auth_register.html">Create an account</a></p>
+                        @if (Route::has('register'))
+                        <p class="signup-link">New Here? <a href="{{ route('register') }}">Create an account</a></p>
+                        @endif
                             {!! Form::open([
                                 'route' => 'login',
                                 'id' => 'login',
